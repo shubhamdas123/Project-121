@@ -1,0 +1,188 @@
+<html>
+
+<head>
+    <title>Google Lens vs MobileNet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <center>
+        <img src="google-lens.jpg" style="width:380px;"> <span style="font-size: 30px; color: red;">vs</span>
+        <span class="btn btn-primary" style="height: 60px; width: 200px; margin-left: 50px; font-size: 30px;">MobileNet</span>
+        <hr>
+        <ol>
+            <div class="testImageAndResult col-xs-12">
+
+                <li class="col-sm-4 col-xs-12" style="list-style:none">
+                    <b>Test Image - </b>
+                    <img src="bottle.jpg" class="img-responsive" style="border-radius: 20px;">
+                </li>
+
+                <h5 class="col-sm-4 col-xs-12">
+                    Output on <b>GOOGLE LENS</b> -
+                    <span>Tumbler</span>
+                </h5>
+
+                <h5 class="col-sm-4 col-xs-12">
+                    Output on <b>MobileNet Model</b> -
+                    <span>Water bottle</span>
+                </h5>
+
+                <div class="mini_result" class="col-xs-12">
+                    <h4>Result -</h4>
+                    <hr>
+                    <h4>MobileNet wins</h4>
+                </div>
+
+            </div>
+
+        </ol>
+
+        <ol>
+            <div class="testImageAndResult col-xs-12" style="margin-top: 50px;">
+
+                <li class="col-sm-4 col-xs-12" style="list-style:none">
+                    <b>Test Image - </b>
+                    <img src="ring.jpg" class="img-responsive" style="border-radius: 20px;">
+                </li>
+
+                <h5 class="col-sm-4 col-xs-12">
+                    Output on <b>GOOGLE LENS</b> -
+                    <span>Ring</span>
+                </h5>
+
+                <h5 class="col-sm-4 col-xs-12">
+                    Output on <b>MobileNet Model</b> -
+                    <span>Ignitor</span>
+                </h5>
+
+                <div class="mini_result" class="col-xs-12">
+                    <h4>Result -</h4>
+                    <hr>
+                    <h4>Google Lens wins</h4>
+                </div>
+
+            </div>
+
+        </ol>
+
+        <ol>
+            <div class="testImageAndResult col-xs-12" style="margin-top: 50px;">
+
+                <li class="col-sm-4 col-xs-12" style="list-style:none">
+                    <b>Test Image - </b>
+                    <img src="box.jpg" class="img-responsive" style="border-radius: 20px;">
+                </li>
+
+                <h5 class="col-sm-4 col-xs-12">
+                    Output on <b>GOOGLE LENS</b> -
+                    <span>Pencil Box</span>
+                </h5>
+
+                <h5 class="col-sm-4 col-xs-12">
+                    Output on <b>MobileNet Model</b> -
+                    <span>Television</span>
+                </h5>
+
+                <div class="mini_result" class="col-xs-12">
+                    <h4>Result -</h4>
+                    <hr>
+                    <h4>Google Lens wins</h4>
+                </div>
+
+            </div>
+
+        </ol>
+
+        <ol>
+            <div class="testImageAndResult col-xs-12" style="margin-top: 50px;">
+
+                <li class="col-sm-4 col-xs-12" style="list-style:none">
+                    <b>Test Image - </b>
+                    <img src="phone.jpg" class="img-responsive" style="border-radius: 20px;">
+                </li>
+
+                <h5 class="col-sm-4 col-xs-12">
+                    Output on <b>GOOGLE LENS</b> -
+                    <span>Smart Phone</span>
+                </h5>
+
+                <h5 class="col-sm-4 col-xs-12">
+                    Output on <b>MobileNet Model</b> -
+                    <span>Mobile Phone</span>
+                </h5>
+
+                <div class="mini_result" class="col-xs-12">
+                    <h4>Result -</h4>
+                    <hr>
+                    <h4>Draw</h4>
+                </div>
+
+            </div>
+
+        </ol>
+
+        <ol>
+            <div class="testImageAndResult col-xs-12" style="margin-top: 50px;">
+
+                <li class="col-sm-4 col-xs-12" style="list-style:none">
+                    <b>Test Image - </b>
+                    <img src="scissors.jpg" class="img-responsive" style="border-radius: 20px;">
+                </li>
+
+                <h5 class="col-sm-4 col-xs-12">
+                    Output on <b>GOOGLE LENS</b> -
+                    <span>Garden Shears</span>
+                </h5>
+
+                <h5 class="col-sm-4 col-xs-12">
+                    Output on <b>MobileNet Model</b> -
+                    <span>Blower</span>
+                </h5>
+
+                <div class="mini_result" class="col-xs-12">
+                    <h4>Result -</h4>
+                    <hr>
+                    <h4>Both lose</h4>
+                </div>
+
+            </div>
+
+        </ol>
+    </center>
+    <br> <br>
+    <center>
+        <ol>
+            <h5 id="comparision" class="btn btn-success">
+                I have tested 5 images
+                <br>
+                <b>MobileNet</b> guessed 2 correct and
+                <b>Google Lens</b> guessed 3 correct
+                <br> According to me, <b>Google Lens</b> is more accurate than <b>MobileNet</b> model!
+            </h5>
+        </ol>
+    </center>
+    <center>
+        <ol>
+            <div class="testImageAndResult col-xs-12" style="margin-top: 50px; background-color: white; color: white;">
+
+                <li class="col-sm-4 col-xs-12" style="list-style:none">
+                    <p>JHSHGUHSDGBVFUDYGFUJDGFUDGFHXCHBXHCBJCVJHVCHJVCHV</p>
+                </li>
+        </ol>
+
+        <div class="copy-right-footer">
+            Developed by - Shubham Das
+        </div>
+    </center>
+</body>
+
+</html>
